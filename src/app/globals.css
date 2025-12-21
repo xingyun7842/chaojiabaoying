@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-wechat-bg text-wechat-text;
+  }
+}
+
+@layer components {
+  .wechat-button {
+    @apply bg-wechat-green text-white px-4 sm:px-6 py-2.5 sm:py-3 rounded-full font-medium hover:bg-wechat-green-light transition-colors active:scale-95 transform text-sm sm:text-base;
+  }
+
+  .wechat-input {
+    @apply bg-white border border-wechat-border rounded-lg px-3 sm:px-4 py-2 sm:py-3 focus:outline-none focus:ring-2 focus:ring-wechat-green focus:border-transparent text-sm sm:text-base;
+  }
+
+  .wechat-card {
+    @apply bg-white rounded-lg sm:rounded-xl shadow-sm border border-wechat-border p-3 sm:p-4;
+  }
+}
