@@ -5,7 +5,12 @@
       "Bash(npm install:*)",
       "Bash(npm run dev)",
       "Bash(npx next:*)",
-      "Bash(tar:*)"
+      "Bash(tar:*)",
+      "Bash(git push:*)",
+      "Bash(netstat:*)",
+      "Bash(findstr:*)",
+      "Bash(taskkill:*)",
+      "Bash(git add:*)"
     ]
   }
 }

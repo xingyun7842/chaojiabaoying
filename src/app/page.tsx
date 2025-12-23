@@ -29,12 +29,12 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-wechat-bg to-white">
+    <main className="min-h-screen bg-gradient-to-b from-red-600 to-red-400">
       <div className="container mx-auto px-4 py-6 sm:py-8 max-w-2xl">
         {/* 标题区域 */}
         <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-wechat-text mb-2">吵架包赢</h1>
-          <p className="text-sm sm:text-base text-wechat-text-secondary px-2">让你在任何争吵中都能获胜的神奇助手</p>
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-lg">吵架包赢</h1>
+          <p className="text-sm sm:text-base text-white/90 px-2 drop-shadow">让你在任何争吵中都能获胜的神奇助手</p>
         </div>
 
         {/* 主要输入区域 */}
