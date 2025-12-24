@@ -48,7 +48,7 @@ export default function Home() {
       <div className="container mx-auto px-4 py-6 sm:py-8 max-w-2xl relative z-10">
         {/* 标题区域 */}
         <div className="text-center mb-6 sm:mb-8">
-          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-lg">吵架包赢</h1>
+          <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-lg">吵架必胜！win！win！win！！！</h1>
           <p className="text-sm sm:text-base text-white/90 px-2 drop-shadow">让你在任何争吵中都能获胜的神奇助手</p>
         </div>
 
