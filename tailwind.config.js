@@ -8,8 +8,8 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'wechat-green': '#07C160',
-        'wechat-green-light': '#95EC69',
+        'wechat-green': '#FFD700',
+        'wechat-green-light': '#FFE55C',
         'wechat-bg': '#F7F7F7',
         'wechat-text': '#333333',
         'wechat-text-secondary': '#888888',

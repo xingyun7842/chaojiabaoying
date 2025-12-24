@@ -29,8 +29,23 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-red-600 to-red-400">
-      <div className="container mx-auto px-4 py-6 sm:py-8 max-w-2xl">
+    <main className="min-h-screen bg-gradient-to-b from-red-600 to-red-400 relative overflow-hidden">
+      {/* 彩带容器 */}
+      <div className="confetti-container">
+        {[...Array(15)].map((_, i) => (
+          <div
+            key={i}
+            className="confetti"
+            style={{
+              left: `${Math.random() * 100}%`,
+              animationDelay: `${Math.random() * 3}s`,
+              backgroundColor: ['#FFD700', '#FFE55C', '#FFA500', '#FF6B6B', '#4ECDC4'][Math.floor(Math.random() * 5)]
+            }}
+          />
+        ))}
+      </div>
+
+      <div className="container mx-auto px-4 py-6 sm:py-8 max-w-2xl relative z-10">
         {/* 标题区域 */}
         <div className="text-center mb-6 sm:mb-8">
           <h1 className="text-2xl sm:text-3xl font-bold text-white mb-2 drop-shadow-lg">吵架包赢</h1>
@@ -64,7 +79,7 @@ export default function Home() {
               onChange={(e) => setIntensity(Number(e.target.value))}
               className="w-full h-2 bg-wechat-border rounded-lg appearance-none cursor-pointer slider"
               style={{
-                background: `linear-gradient(to right, #07C160 0%, #07C160 ${(intensity - 1) * 11.11}%, #E5E5E5 ${(intensity - 1) * 11.11}%, #E5E5E5 100%)`
+                background: `linear-gradient(to right, #FFD700 0%, #FFD700 ${(intensity - 1) * 11.11}%, #E5E5E5 ${(intensity - 1) * 11.11}%, #E5E5E5 100%)`
               }}
             />
             <div className="flex justify-between text-xs text-wechat-text-secondary mt-2">
@@ -101,11 +116,40 @@ export default function Home() {
       </div>
 
       <style jsx>{`
+        .confetti-container {
+          position: fixed;
+          top: -10px;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          pointer-events: none;
+          z-index: 1;
+        }
+
+        .confetti {
+          position: absolute;
+          width: 10px;
+          height: 20px;
+          opacity: 0.8;
+          animation: confetti-fall 4s linear infinite;
+        }
+
+        @keyframes confetti-fall {
+          0% {
+            transform: translateY(-100px) rotate(0deg);
+            opacity: 1;
+          }
+          100% {
+            transform: translateY(100vh) rotate(360deg);
+            opacity: 0;
+          }
+        }
+
         .slider::-webkit-slider-thumb {
           appearance: none;
           width: 20px;
           height: 20px;
-          background: #07C160;
+          background: #FFD700;
           border-radius: 50%;
           cursor: pointer;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
@@ -115,7 +159,7 @@ export default function Home() {
         .slider::-moz-range-thumb {
           width: 20px;
           height: 20px;
-          background: #07C160;
+          background: #FFD700;
           border-radius: 50%;
           cursor: pointer;
           box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
